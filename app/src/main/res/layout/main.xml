@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_scan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/connect" />
+
+            <Button
+                android:id="@+id/Send_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/btnSend"></Button>
+
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btnClose" />
+
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:id="@+id/print_preview"
+                android:layout_width="600px"
+                android:layout_height="wrap_content"
+                android:background="@color/white_fff">
+
+                <TextView
+                    android:id="@+id/print_preview_tittle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30px"
+                    android:layout_marginTop="60px"
+                    android:gravity="center"
+                    android:text="深圳泰首智能技术有限公司\n访客单"
+                    android:textColor="@color/black_000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/print_preview_divide1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_below="@+id/print_preview_tittle"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:background="@color/black_000" />
+
+                <TextView
+                    android:id="@+id/print_preview_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/print_preview_divide1"
+                    android:layout_below="@+id/print_preview_divide1"
+                    android:layout_marginTop="20px"
+                    android:text="来宾姓名：未添加"
+                    android:textColor="@color/black_000" />
+
+                <TextView
+                    android:id="@+id/print_preview_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/print_preview_divide1"
+                    android:layout_below="@+id/print_preview_name"
+                    android:layout_marginTop="20px"
+                    android:text="来访日期：未添加"
+                    android:textColor="@color/black_000" />
+
+                <TextView
+                    android:id="@+id/print_preview_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/print_preview_divide1"
+                    android:layout_below="@+id/print_preview_date"
+                    android:layout_marginTop="20px"
+                    android:text="来访时间：未添加"
+                    android:textColor="@color/black_000" />
+
+                <TextView
+                    android:id="@+id/print_preview_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/print_preview_divide1"
+                    android:layout_below="@+id/print_preview_time"
+                    android:layout_marginTop="20px"
+                    android:text="核查结果：未添加"
+                    android:textColor="@color/black_000" />
+
+                <TextView
+                    android:id="@+id/print_preview_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/print_preview_divide1"
+                    android:layout_below="@+id/print_preview_result"
+                    android:layout_marginTop="20px"
+                    android:text="来访人员：未添加"
+                    android:textColor="@color/black_000" />
+
+                <TextView
+                    android:id="@+id/print_preview_idcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/print_preview_divide1"
+                    android:layout_below="@+id/print_preview_count"
+                    android:layout_marginTop="20px"
+                    android:text="身份证号：未添加"
+                    android:textColor="@color/black_000" />
+
+                <TextView
+                    android:id="@+id/print_preview_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/print_preview_divide1"
+                    android:layout_below="@+id/print_preview_idcard"
+                    android:layout_marginTop="20px"
+                    android:text="联系电话：未添加"
+                    android:textColor="@color/black_000" />
+
+                <TextView
+                    android:id="@+id/print_preview_company"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/print_preview_divide1"
+                    android:layout_below="@+id/print_preview_mobile"
+                    android:layout_marginTop="20px"
+                    android:text="来访单位：未添加"
+                    android:textColor="@color/black_000" />
+
+                <ImageView
+                    android:id="@+id/print_preview_img1"
+                    android:layout_width="150px"
+                    android:layout_height="200px"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/print_preview_divide1"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="30px"
+                    android:src="@mipmap/whitelist" />
+
+                <ImageView
+                    android:id="@+id/print_preview_img2"
+                    android:layout_width="150px"
+                    android:layout_height="200px"
+                    android:layout_alignTop="@+id/print_preview_img1"
+                    android:layout_toStartOf="@+id/print_preview_img1"
+                    android:src="@mipmap/whitelist" />
+
+                <View
+                    android:id="@+id/print_preview_divide2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:layout_below="@+id/print_preview_company"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="20px"
+                    android:background="@color/black_000" />
+
+                <TextView
+                    android:id="@+id/print_preview_visitor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/print_preview_divide2"
+                    android:layout_below="@+id/print_preview_divide2"
+                    android:layout_marginTop="20px"
+                    android:text="拜访对象：未添加"
+                    android:textColor="@color/black_000" />
+
+                <TextView
+                    android:id="@+id/print_preview_visitor_idcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/print_preview_divide2"
+                    android:layout_below="@+id/print_preview_visitor_name"
+                    android:layout_marginBottom="40px"
+                    android:layout_marginTop="20px"
+                    android:text="身份证号：未添加"
+                    android:textColor="@color/black_000" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/img_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30px" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

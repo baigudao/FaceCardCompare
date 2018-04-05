@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.taisau.facecardcompare.ui.WelcomeActivity"
+    android:background="@color/white_fff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/reg_img_logo"
+            android:src="@mipmap/logo"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="133px"
+            android:layout_marginTop="133px"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40px"
+            android:text="@string/wel_tittle"
+            android:id="@+id/reg_text_tittle"
+            android:textColor="@color/color_132D4E"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10px"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32px"
+            android:text="@string/wel_sub_tittle"
+            android:id="@+id/reg_text_sub_tittle"
+            android:textColor="@color/color_132D4E"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="60px"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24px"
+            android:text="当前设备码："
+            android:id="@+id/reg_text_machine_key"
+            android:textColor="@color/color_132D4E"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20px"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reg_QR_img"
+            android:layout_gravity="center_horizontal"
+            />
+        <EditText
+            android:id="@+id/reg_edit_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/input_box"
+            android:hint="设备使用KEY"
+            android:paddingLeft="18px"
+            android:text=""
+            android:textSize="24px" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="32px"
+            android:textColor="@color/white_fff"
+            android:text="@string/ensure"
+            android:id="@+id/reg_button_ensure"
+            android:layout_marginTop="30px"
+            android:layout_marginBottom="30px"
+            android:background="@drawable/welcome_btn_click"/>
+    </LinearLayout>
+
+
+
+</ScrollView>

@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.taisau.facecardcompare.ui.history.PrintHistoryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="98px"
+        android:background="@drawable/title_background_blue"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:src="@mipmap/ic_back" />
+            <!--    android:layout_marginStart="40px"
+                android:layout_marginEnd="40px"-->
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="记录详情"
+            android:textColor="@color/color_white_default"
+            android:textSize="32px" />
+
+        <Button
+            android:id="@+id/print_history_print_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="50px"
+            android:layout_weight="1"
+            android:background="@mipmap/print_btn"
+            android:text="打印"
+            android:textColor="@color/color_1d7cf6"
+            android:textSize="24px"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_ddd"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="188px"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20px"
+            android:background="@color/white_fff">
+
+            <ImageView
+                android:id="@+id/print_compare_info_img"
+                android:layout_width="420px"
+                android:layout_height="168px"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20px"
+                android:layout_marginTop="20px"
+                android:src="@mipmap/his_compare_pass" />
+
+            <TextView
+                android:id="@+id/print_compare_info_res"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/print_compare_info_img"
+                android:layout_alignLeft="@id/print_compare_info_img"
+                android:layout_marginBottom="20px"
+                android:layout_marginLeft="180px"
+                android:gravity="center"
+                android:text="分值：70分"
+                android:textColor="@color/color_1ab830"
+                android:textSize="38px" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/print_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_fff"
+            android:paddingLeft="30px"
+            android:singleLine="true"
+            android:text="时间："
+            android:textColor="@color/color_333"
+            android:textSize="24px" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_fff"
+            android:gravity="center">
+
+
+            <ImageView
+                android:id="@+id/print_card_img"
+                android:layout_width="171px"
+                android:layout_height="228px"
+                android:layout_marginBottom="10px"
+                android:layout_marginRight="100px"
+                android:layout_marginTop="10px" />
+
+            <ImageView
+                android:id="@+id/print_face_img"
+                android:layout_width="171px"
+                android:layout_height="228px"
+                android:layout_marginBottom="10px"
+                android:layout_marginTop="10px"
+                android:layout_toRightOf="@+id/print_card_img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/print_card_img"
+                android:layout_alignRight="@+id/print_card_img"
+                android:layout_below="@id/print_card_img"
+                android:layout_marginBottom="30px"
+                android:gravity="center"
+                android:text="身份证照片"
+                android:textColor="@color/color_132D4E"
+                android:textSize="24px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/print_face_img"
+                android:layout_alignRight="@+id/print_face_img"
+                android:layout_below="@id/print_face_img"
+                android:layout_marginBottom="30px"
+                android:gravity="center"
+                android:text="现场照片"
+                android:textColor="@color/color_132D4E"
+                android:textSize="24px" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_fff"
+            android:paddingLeft="30px"
+            android:singleLine="true"
+            android:text="人员信息："
+            android:textColor="@color/color_333"
+            android:textSize="24px"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_fff">
+
+            <TextView
+                android:id="@+id/print_info_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="10px"
+                android:layout_marginLeft="70px"
+                android:layout_marginTop="20px"
+                android:text="姓名："
+                android:textColor="@color/color_333"
+                android:textSize="22px" />
+
+            <TextView
+                android:id="@+id/print_info_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/print_info_name1"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="70px"
+                android:maxEms="10"
+                android:singleLine="true"
+                android:text="张磊磊"
+                android:textColor="@color/color_333"
+                android:textSize="22px" />
+
+            <TextView
+                android:id="@+id/print_info_card1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/print_info_name1"
+                android:layout_below="@id/print_info_name1"
+                android:layout_marginBottom="10px"
+                android:text="身份证号："
+                android:textColor="@color/color_333"
+                android:textSize="22px" />
+
+            <TextView
+                android:id="@+id/print_info_card2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/print_info_card1"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="70px"
+                android:maxEms="10"
+                android:singleLine="true"
+                android:text="420303198910241523"
+                android:textColor="@color/color_333"
+                android:textSize="22px" />
+
+            <TextView
+                android:id="@+id/print_info_birthday1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/print_info_name1"
+                android:layout_below="@id/print_info_card1"
+                android:layout_marginBottom="10px"
+                android:text="出生日期："
+                android:textColor="@color/color_333"
+                android:textSize="22px" />
+
+            <TextView
+                android:id="@+id/print_info_birthday2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/print_info_birthday1"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="70px"
+                android:maxEms="10"
+                android:singleLine="true"
+                android:text="1992.10.15"
+                android:textColor="@color/color_333"
+                android:textSize="22px" />
+
+            <TextView
+                android:id="@+id/print_info_sex1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/print_info_name1"
+                android:layout_below="@id/print_info_birthday1"
+                android:layout_marginBottom="10px"
+                android:text="性别："
+                android:textColor="@color/color_333"
+                android:textSize="22px" />
+
+            <TextView
+                android:id="@+id/print_info_sex2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/print_info_sex1"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="70px"
+                android:maxEms="10"
+                android:singleLine="true"
+                android:text="男"
+                android:textColor="@color/color_333"
+                android:textSize="22px" />
+            <TextView
+                android:id="@+id/print_info_ethnic1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/print_info_name1"
+                android:layout_below="@id/print_info_sex1"
+                android:layout_marginBottom="10px"
+                android:text="民族："
+                android:textColor="@color/color_333"
+                android:textSize="22px" />
+            <TextView
+                android:id="@+id/print_info_ethnic2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/print_info_ethnic1"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="70px"
+                android:maxEms="10"
+                android:singleLine="true"
+                android:text="汉族"
+                android:textColor="@color/color_333"
+                android:textSize="22px" />
+            <TextView
+                android:id="@+id/print_info_valid_time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/print_info_name1"
+                android:layout_below="@id/print_info_ethnic1"
+                android:text="有效时间："
+                android:textColor="@color/color_333"
+                android:layout_marginBottom="10px"
+                android:textSize="22px" />
+            <TextView
+                android:id="@+id/print_info_valid_time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/print_info_valid_time1"
+                android:layout_marginBottom="30px"
+                android:layout_marginRight="70px"
+                android:gravity="right"
+                android:maxEms="20"
+                android:text="20161015"
+                android:textColor="@color/color_333"
+                android:textSize="22px" />
+            <TextView
+                android:id="@+id/print_info_address1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/print_info_name1"
+                android:layout_below="@id/print_info_valid_time1"
+                android:text="住址："
+                android:textColor="@color/color_333"
+                android:textSize="22px" />
+
+            <TextView
+                android:id="@+id/print_info_address2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/print_info_address1"
+                android:layout_marginBottom="30px"
+                android:layout_marginRight="70px"
+                android:gravity="right"
+                android:maxEms="20"
+                android:text="as大大大苏打三大打扫打扫大大的阿斯达斯大苏打大三大四的阿斯达斯大苏打"
+                android:textColor="@color/color_333"
+                android:textSize="22px" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+
+    <!--    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30px"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:background="@mipmap/contact_label"
+                android:gravity="center"
+                android:padding="20px"
+                android:text="来访人联系信息"
+                android:textColor="@color/white_fff"
+                android:textSize="24px" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white_fff"
+                app:cardCornerRadius="5dp"
+
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/print_input_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:layout_marginTop="30px"
+                        android:text="联系电话："
+                        android:textColor="@color/color_132D4E"
+                        android:textSize="24px" />
+
+                    <EditText
+                        android:id="@+id/print_edit_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/print_input_mobile"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30px"
+                        android:layout_toRightOf="@+id/print_input_mobile"
+                        android:digits="1234567890-*#"
+                        android:inputType="phone" />
+
+                    <TextView
+                        android:id="@+id/print_input_company"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/print_input_mobile"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:layout_marginTop="30px"
+                        android:text="来访单位："
+                        android:textColor="@color/color_132D4E"
+                        android:textSize="24px" />
+
+                    <EditText
+                        android:id="@+id/print_edit_company"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/print_input_company"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30px"
+                        android:layout_toRightOf="@+id/print_input_company"
+                        android:textColor="@color/color_132D4E"
+                        android:textSize="24px" />
+
+                    <TextView
+                        android:id="@+id/print_input_person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@id/print_input_company"
+                        android:layout_marginBottom="30px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:layout_marginTop="30px"
+                        android:text="同行人员："
+                        android:textColor="@color/color_132D4E"
+                        android:textSize="24px" />
+
+                    <EditText
+                        android:id="@+id/print_edit_person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/print_input_person"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30px"
+                        android:layout_toRightOf="@+id/print_input_person"
+                        android:textColor="@color/color_132D4E"
+                        android:textSize="24px" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30px"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:background="@mipmap/visitor_label"
+                android:gravity="center"
+                android:padding="20px"
+                android:text="拜访人员"
+                android:textColor="@color/white_fff"
+                android:textSize="24px" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white_fff"
+                app:cardCornerRadius="5dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/print_vistor_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="148px"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/print_vistor_img"
+                        android:layout_width="100px"
+                        android:layout_height="100px"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40px" />
+
+                    <TextView
+                        android:id="@+id/print_vistor_name_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="55px"
+                        android:layout_toRightOf="@+id/print_vistor_img"
+                        android:lineSpacingExtra="21px"
+                        android:text="姓名：李雷雷\nID:100001"
+                        android:textColor="@color/color_7a7a7a"
+                        android:textSize="19px" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/print_add_vistor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="40px"
+                    android:text="点击添加"
+                    android:textColor="@color/color_132D4E"
+                    android:textSize="40px" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>-->

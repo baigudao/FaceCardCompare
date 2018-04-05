@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32px"
+        android:background="@color/white_fff">
+        <TextView
+            android:id="@+id/setting_compare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="20px"
+            android:text="比对参数设置"
+            android:textSize="24px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/setting_compare"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/setting_compare"
+            android:layout_marginRight="20px"
+            android:src="@mipmap/tiaozhuan_icon" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/personinfo_back_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ddd"
+    android:orientation="vertical"
+    tools:context="com.taisau.facecardcompare.ui.personlist.PersonInfoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="98px"
+        android:background="@drawable/title_background_blue"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:src="@mipmap/ic_back" />
+            <!--    android:layout_marginStart="40px"
+                android:layout_marginEnd="40px"-->
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="人员信息"
+            android:textColor="@color/color_white_default"
+            android:textSize="32px" />
+
+        <ImageView
+            android:id="@+id/personinfo_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"
+            android:src="@mipmap/add_icon" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="372px"
+        android:layout_marginTop="15px"
+        android:background="@color/white_fff"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="20px"
+            android:text="基本信息"
+            android:textColor="@color/color_333"
+            android:textSize="26px"
+            android:textStyle="bold"
+
+            />
+
+        <ImageView
+            android:id="@+id/personinfo_face_img"
+            android:layout_width="180px"
+            android:layout_height="180px"
+            android:layout_gravity="center"
+
+            android:layout_marginBottom="20px"
+            android:layout_marginTop="10px" />
+
+        <TextView
+            android:id="@+id/personinfo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20px"
+            android:singleLine="true"
+            android:text="姓名：李雷雷"
+            android:textColor="@color/color_333"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/personinfo_idcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="身份证号：420303198910241523"
+            android:textColor="@color/color_333"
+            android:textSize="24px" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15px"
+        android:background="@color/white_fff">
+
+        <TextView
+            android:id="@+id/personinfo_detail_social_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="20px"
+            android:text="社交信息"
+            android:textColor="@color/color_333"
+            android:textSize="26px"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/personinfo_social_mobile1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/personinfo_detail_social_label"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="70px"
+            android:layout_marginTop="20px"
+            android:text="手机号："
+            android:textColor="@color/color_333"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/personinfo_social_mobile2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/personinfo_social_mobile1"
+            android:layout_alignBottom="@+id/personinfo_social_mobile1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="70px"
+            android:maxEms="10"
+            android:singleLine="true"
+            android:text="13412345678"
+            android:textColor="@color/color_333"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/personinfo_social_qq1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/personinfo_social_mobile1"
+            android:layout_below="@id/personinfo_social_mobile1"
+            android:layout_marginBottom="20px"
+            android:text="QQ号："
+            android:textColor="@color/color_333"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/personinfo_social_qq2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/personinfo_social_qq1"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/personinfo_social_qq1"
+            android:layout_marginRight="70px"
+            android:maxEms="10"
+            android:singleLine="true"
+            android:text="123456789"
+            android:textColor="@color/color_333"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/personinfo_social_email1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/personinfo_social_mobile1"
+            android:layout_below="@+id/personinfo_social_qq1"
+            android:layout_marginBottom="30px"
+            android:text="邮箱号："
+            android:textColor="@color/color_333"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/personinfo_social_email2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/personinfo_social_email1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="70px"
+            android:maxEms="10"
+            android:singleLine="true"
+            android:text="123456789@qq.com"
+            android:textColor="@color/color_333"
+            android:textSize="24px" />
+    </RelativeLayout>
+</LinearLayout>

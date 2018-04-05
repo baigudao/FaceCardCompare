@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/group_back_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.taisau.facecardcompare.ui.personlist.GroupActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="98px"
+        android:background="@drawable/title_background_blue"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:src="@mipmap/ic_back" />
+            <!--    android:layout_marginStart="40px"
+                android:layout_marginEnd="40px"-->
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="名单分组"
+            android:textColor="@color/color_white_default"
+            android:textSize="32px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/reset_icon"
+            android:id="@+id/group_bar_refresh"
+            android:layout_gravity="right"
+            android:layout_marginRight="50px"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_fff"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2.01">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/group_tab_black"
+            android:gravity="center_vertical|center_horizontal"
+
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/group_tab_black_img"
+                android:background="@mipmap/blacklist"
+                android:layout_marginRight="20px"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32px"
+                android:id="@+id/group_tab_black_text"
+                android:textColor="@color/color_132D4E"
+                android:text="黑名单" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="84px"
+            android:layout_marginBottom="5px"
+            android:layout_marginTop="5px"
+            android:background="@color/color_737373" />
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/group_tab_white"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/group_tab_white_img"
+                android:src="@mipmap/whitelist"
+                android:layout_marginRight="20px"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32px"
+                android:textColor="@color/color_132D4E"
+                android:id="@+id/group_tab_white_text"
+                android:text="白名单" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/group_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+</LinearLayout>
+

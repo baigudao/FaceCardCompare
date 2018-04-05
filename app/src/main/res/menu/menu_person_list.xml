@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.taisau.facecardcompare.ui.personlist.PersonListActivity">
+    <item
+        android:id="@+id/action_refresh_group_list"
+        android:orderInCategory="100"
+        android:title="更新分组列表"
+        app:showAsAction="never" />
+
+</menu>

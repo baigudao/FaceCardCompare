@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f2f2f2"
+    android:orientation="vertical"
+    tools:context="com.taisau.facecardcompare.ui.setting.SettingActivity">
+
+    <include layout="@layout/content_setting_title_bar" />
+
+   <!-- <include layout="@layout/content_setting_interval_view" />-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_ddd" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15px"
+        android:background="@color/color_ddd" />
+    <RelativeLayout
+        android:id="@+id/rl_serial_number"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/color_white_default">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30px"
+            android:text="序列号："
+            android:textColor="@color/color_333"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/tv_serial_number"
+            android:layout_width="510px"
+            android:layout_height="60px"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="30px"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/color_666"
+            android:textSize="26px"
+            android:paddingStart="@dimen/dp20"
+            tools:text="card001"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_server_ip"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/color_white_default">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_marginStart="30px"
+            android:text="服务器IP地址："
+            android:textColor="@color/color_333"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/tv_server_ip"
+            android:layout_width="510px"
+            android:layout_height="60px"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="30px"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/color_666"
+            android:textSize="26px"
+            android:paddingStart="@dimen/dp20"
+            tools:text="192.168.1.200"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_server_port"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/color_white_default">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_marginStart="30px"
+            android:text="服务器端口："
+            android:textColor="@color/color_333"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/tv_server_port"
+            android:layout_width="510px"
+            android:layout_height="60px"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30px"
+            android:gravity="center_vertical"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/color_666"
+            android:textSize="26px"
+            android:paddingStart="@dimen/dp20"
+            tools:text="8080"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_ddd" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15px"
+        android:background="@color/color_ddd" />
+
+    <RelativeLayout
+        android:id="@+id/rl_soft_storage"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/color_white_default">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_marginStart="30px"
+            android:text="软件占用存储"
+            android:textColor="@color/color_333"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/tv_soft_storage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30px"
+            android:textColor="@color/color_666"
+            android:textSize="26px"
+            tools:text="298KB" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="30px"
+        android:background="@color/color_ddd" />
+    <RelativeLayout
+        android:id="@+id/rl_name_list_storage"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/color_white_default">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_marginStart="30px"
+            android:text="名单占用存储"
+            android:textColor="@color/color_333"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/tv_name_list_storage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30px"
+            android:textColor="@color/color_666"
+            android:textSize="26px"
+            tools:text="298KB" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_ddd" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="15px"
+        android:background="@color/color_ddd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white_default"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="30px"
+                android:text="设备地址设置："
+                android:textColor="@color/color_333"
+                android:textSize="26px" />
+
+            <Spinner
+                android:id="@+id/spinner_provinces"
+                android:layout_width="302px"
+                android:layout_height="46px"
+                android:layout_gravity="center_vertical"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/bg_spinner"
+                android:layout_marginStart="20px" />
+
+        </LinearLayout>
+        <Spinner
+            android:id="@+id/spinner_cities"
+            android:layout_width="302px"
+            android:layout_height="46px"
+            android:spinnerMode="dropdown"
+            android:layout_marginStart="230dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_spinner"
+           />
+        <Spinner
+            android:id="@+id/spinner_counties"
+            android:layout_width="302px"
+            android:layout_height="46px"
+            android:layout_marginTop="20px"
+            android:background="@drawable/bg_spinner"
+            android:spinnerMode="dropdown"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="230dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="88px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="30px"
+                android:text="身份证阅读器类型"
+                android:textColor="@color/color_333"
+                android:textSize="26px" />
+
+            <!--<RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10px"
+                android:button="@drawable/setting_radio_button_selector"
+                android:checked="true"
+                android:padding="10px"
+                android:text="普通"
+                android:textColor="@color/color_666"
+                android:textSize="26px" />-->
+            <CheckBox
+                android:id="@+id/cb_read_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="22px"
+                android:button="@drawable/setting_radio_button_selector"
+                android:checked="false"
+                android:padding="10px"
+                android:text="普通"
+                android:textColor="@color/color_666"
+                android:textSize="26px" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="166px">
+    <ImageView
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:id="@+id/history_list_avatar"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40px"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="19px"
+        android:textColor="@color/color_7a7a7a"
+        android:text="姓名：李雷雷"
+        android:layout_marginLeft="55px"
+        android:layout_marginTop="30px"
+        android:layout_toRightOf="@+id/history_list_avatar"
+        android:id="@+id/history_list_name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="19px"
+        android:textColor="@color/color_7a7a7a"
+        android:text="身份证号：420303199410111518"
+        android:layout_marginLeft="55px"
+        android:layout_marginTop="21px"
+        android:layout_toRightOf="@+id/history_list_avatar"
+        android:layout_below="@+id/history_list_name"
+        android:id="@+id/history_list_card_id"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="19px"
+        android:textColor="@color/color_7a7a7a"
+        android:text="核查结果：核查通过"
+        android:layout_marginLeft="55px"
+        android:layout_marginTop="21px"
+        android:layout_toRightOf="@+id/history_list_avatar"
+        android:layout_below="@+id/history_list_card_id"
+        android:id="@+id/history_list_result"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="19px"
+        android:textColor="@color/color_7a7a7a"
+        android:text="日期：2017.03.28"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="40px"
+        android:layout_marginTop="30px"
+        android:id="@+id/history_list_time"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40px"
+        android:layout_centerVertical="true"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_gray_cfcfcf"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

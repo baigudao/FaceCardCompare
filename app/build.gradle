@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.taisau.facecardcompare"
+        minSdkVersion 21
+        targetSdkVersion 22
+        multiDexEnabled true
+        versionCode 24
+        versionName "beta v6.1.1.6"
+        /*flavorDimensions "versionCode"
+        dexOptions {
+            jumboMode true
+        }*/
+//        jackOptions {
+//            enabled true
+//        }
+
+        flavorDimensions "versionCode"
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            jniDebuggable true
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            renderscriptDebuggable false
+            minifyEnabled false
+
+        }
+    }
+    productFlavors {
+        armv7 {
+            ndk {
+                abiFilter "armeabi-v7a"
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/hurraylibs.jar')
+    compile files('libs/opencv library - 3.2.0.jar')
+    compile project(':ptr-lib')
+    compile files('libs/btsdk.jar')
+    compile files('libs/jxl-2.6.12.jar')
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.+'
+    compile 'com.squareup.retrofit2:converter-gson:2.+'
+    compile 'io.reactivex:rxandroid:1.+'
+    compile 'io.reactivex:rxjava:1.+'
+    compile 'org.greenrobot:greendao:3.2.0'
+    compile 'org.greenrobot:greendao-generator:3.2.0'
+    compile 'com.github.iwgang:familiarrecyclerview:1.3.1'
+    compile 'com.github.jiang111:IndexRecyclerView:1.0'
+    compile 'com.android.support:cardview-v7:25.2.0'
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:support-v4:25.2.0'
+    compile 'com.android.support:design:25.2.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'net.zetetic:android-database-sqlcipher:3.5.7@aar'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.zxing:core:3.+'
+    compile 'com.google.zxing:android-core:3.+'
+    compile 'org.jsoup:jsoup:1.10.3'
+    compile files('libs/pinyin4j-2.5.0.jar')
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+}

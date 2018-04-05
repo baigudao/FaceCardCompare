@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:id="@+id/tv_value_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:textSize="32px"
+        tools:text="系统名称 : "/>
+
+    <EditText
+        android:id="@+id/et_editText"
+        android:textSize="32px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/ll_choose_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <Button
+            android:id="@+id/btn_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32px"
+            android:text="选择文件"/>
+        <TextView
+            android:id="@+id/tv_choose_status"
+            android:textSize="32px"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/btn_restore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32px"
+            android:text="恢复图片"/>
+    </LinearLayout>
+</LinearLayout>

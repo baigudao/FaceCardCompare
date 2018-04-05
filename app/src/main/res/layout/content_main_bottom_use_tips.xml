@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@mipmap/tips_back_gray"
+    android:id="@+id/main_using_tips"
+    android:layout_width="280px"
+    android:layout_marginTop="6px"
+    android:layout_height="420px"
+    android:orientation="vertical">
+<ImageView
+    android:layout_width="280px"
+    android:layout_height="186px"
+
+    android:src="@mipmap/use_tips_logo"
+    android:layout_gravity="center_horizontal"
+    android:id="@+id/main_tips_image_gongan"
+    />
+
+    <TextView
+        android:id="@+id/main_tips_text_use_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12px"
+        android:text="@string/main_use_tips"
+        android:textColor="@color/white_fff"
+        android:textSize="22px" />
+
+    <TextView
+        android:id="@+id/main_tips_text_use_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:lineSpacingExtra="16px"
+        android:maxEms="10"
+        android:text="1.请将身份证放置阅读器上\n2.身份证读取完成后请正对摄像头，确保能检测到完整、正面头像\n3.比对完成后请取走证件"
+        android:textColor="@color/white_fff"
+        android:textSize="16px" />
+
+
+</LinearLayout>

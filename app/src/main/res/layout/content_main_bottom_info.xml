@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_alignParentRight="true"
+    android:layout_marginTop="514px"
+    android:id="@+id/main_bottom_info"
+    android:layout_width="wrap_content"
+    android:layout_height="432px">
+    android:layout_height="432px">
+    <include layout="@layout/content_main_bottom_use_tips"
+        android:visibility="visible"/>
+
+    <include
+        layout="@layout/content_main_bottom_compare_info"
+        android:visibility="gone" />
+</RelativeLayout>

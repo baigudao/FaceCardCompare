@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.taisau.facecardcompare">
+
+    <!-- android:sharedUserId="android.uid.system" -->
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!--
+       <uses-feature android:name="android.hardware.camera" />
+      <uses-feature android:name="android.hardware.camera.autofocus" />
+    -->
+    <!-- 文件读写权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 网络使用权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-feature android:name="android.hardware.usb.host" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- <uses-permission android:name="android.permission.REBOOT" /> -->
+    <!-- <uses-permission android:name="android.permission.SHUTDOWN" /> -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+
+    <application
+        android:name=".FaceCardApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <!--
+                  <service
+                  android:name="com.baidu.location.f"
+                  android:enabled="true"
+                  android:process=":remote" >
+                  <intent-filter>
+                      <action android:name="com.baidu.location.service_v2.2" >
+                      </action>
+                  </intent-filter>
+              </service>
+              <meta-data
+                  android:name="com.baidu.lbsapi.API_KEY"
+                  android:value="tld4wiYKiUUmWKYGqQMW97Cu3VlIcefG" />  http://lbsyun.baidu.com/apiconsole/key
+        -->
+        <activity
+            android:name=".ui.reg.RegisterActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar.Welcome"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.WelcomeActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar.Welcome"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+            <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_DETACHED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_DETACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:launchMode="singleTask">
+
+        </activity>
+        <activity android:name=".ui.personlist.GroupActivity" />
+        <activity
+            android:name=".ui.history.HistoryListActivity"
+            android:windowSoftInputMode="stateHidden" >
+
+        </activity>
+        <activity android:name=".ui.personlist.PersonInfoActivity" />
+        <activity
+            android:name=".ui.personlist.PersonListActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ui.history.PrintHistoryActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ui.history.PrintSelectActivity" />
+        <activity
+            android:name="zj.com.cn.bluetooth.sdk.PrintActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="zj.com.cn.bluetooth.sdk.DeviceListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/select_device"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".ui.setting.AdsSelectActivity" />
+        <activity android:name=".ui.setting.SettingActivity" />
+        <activity android:name=".ui.setting.display.DisplaySettingActivity" />
+        <activity android:name=".ui.setting.compare.CompareSettingActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:name=".ui.setting.device.DeviceSettingActivity" />
+        <activity android:name=".ui.setting.network.NetworkSettingActivity"/>
+        <service android:name=".service.MsgPushService"
+            android:enabled="true"
+            android:exported="false"/>
+        <service android:name=".service.MsgPushService"
+            android:enabled="true"
+            android:exported="false"/>
+
+    </application>
+
+</manifest>
